@@ -1,0 +1,426 @@
+@font-face {
+    font-family: 'Apfel';
+    src: url('ApfelGrotezk-Regular.woff2') format('woff2'),
+        url('ApfelGrotezk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body::-webkit-scrollbar { width: 0 !important }
+body {
+  font:20px/1.1em arial, sans-serif;
+  background: white;
+  height: auto;
+  font-family: 'Apfel';
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+img {
+  position: relative;
+}
+
+h2 {
+  font-size: 50pt;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 20pt;
+  line-height: 1;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+h4 {
+  font-size: 20pt;
+  line-height: 1;
+}
+
+p {
+  font-size: 12pt;
+  line-height: 1;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+
+/* ////////////////HEADER//////////////// */
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  z-index: 10;
+}
+
+nav {
+  position: relative;
+  float: right;
+  margin-left: 30px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12pt;
+}
+
+nav:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  position: relative;
+  background-color: none;
+  width: 100%;
+  height: 25px;
+}
+
+.tag {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tag:hover {
+  text-decoration: underline;
+}
+
+/* ////////////////HOMEPAGE//////////////// */
+
+.homepage {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: none;
+  padding: 0 0 0 15px;
+}
+
+.fixe {
+  position: fixed;
+  background-color: none;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  padding: 55px 15px 15px 0;
+}
+
+.noir {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.bg {
+  position: relative;
+  background-color: none;
+  width: 49.5%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headwork {
+  width: 100%;
+}
+
+.ligne {
+  width: 100%;
+  display: none;
+  margin: 15px 15px 15px 0;
+  border-top:1px solid black;
+}
+
+.anne {
+  width: 100%;
+  margin: 15px 15px 15px 0;
+  padding-top: 15px;
+  border-top:1px solid black;
+}
+
+.der {
+  width: 100%;
+  margin: 0 15px 15px 0;
+  border-top:none;
+}
+
+.proj {
+  position: relative;
+  width: 33.3%;
+  display: table;
+  height: 0;
+  padding: 0 15px 15px 0;
+}
+
+.couleur {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: blue;
+  margin-bottom: 10px;
+  display: none;
+  overflow: hidden;
+}
+
+.icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width:40%;
+}
+#grand {
+  width: 70%;
+}
+
+.photo {
+  display: none;
+}
+
+.over {
+  z-index: 30;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  mix-blend-mode: difference;
+  text-align: center;
+}
+
+@media only screen and (max-width:980px){
+  .bg {
+    width: 100%;
+  }
+  .couleur {
+    display: block;
+    height: 150px;
+  }
+  .proj {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .fixe {
+    display: none;
+  }
+  /* .menu {
+    height: 35px;
+  } */
+  nav {
+    margin-left: 30px;
+    font-size: 15pt;
+  }
+  /* p {
+    font-size: 25pt;
+  }
+  h3,h4 {
+    font-size: 35pt;
+  } */
+}
+
+/*
+
+tout les div du site :
+
+* {
+
+}
+
+
+pour qu'une div soit visible mais pas cliquable
+
+	pointer-events : none;
+
+
+les élément de base d'une div:
+
+.nom:hover {}
+
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100Vh;
+
+	display: block;
+	display: table;
+	display: table-cell;
+
+	top:0;
+	left:0;
+	pointer-events: none;
+
+
+pour faire des porte folio eazy:
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+pour changer le couleur mettre le numéro de la div
+.kre:nth-child(2) {}
+
+
+pour mettre un background:
+
+	background-color:white;
+	background-image: url("../img/nom.jpg");
+	background-size: cover;
+	background-position: center 0px;
+	background-repeat: no-repeat;
+
+
+
+pour faire des transition:
+
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+
+autre type de transi:
+
+	transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;
+transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+
+
+pour mettre un effet:
+
+	negatif
+	filter: invert(1);
+
+pour faire une rotation
+
+	transform: rotate(180deg);
+
+
+
+
+pour faire des effet de fusion
+
+	mix-blend-mode: normal;
+	mix-blend-mode: multiply;
+	mix-blend-mode: screen;
+	mix-blend-mode: overlay;
+	mix-blend-mode: darken;
+	mix-blend-mode: lighten;
+	mix-blend-mode: color-dodge;
+	mix-blend-mode: color-burn;
+	mix-blend-mode: hard-light;
+	mix-blend-mode: soft-light;
+	mix-blend-mode: difference;
+	mix-blend-mode: exclusion;
+	mix-blend-mode: hue;
+	mix-blend-mode: saturation;
+	mix-blend-mode: color;
+	mix-blend-mode: luminosity;
+
+	mix-blend-mode: initial;
+	mix-blend-mode: inherit;
+	mix-blend-mode: unset;
+
+
+
+pour la typo:
+
+	font-size: 8vh;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+
+pour mettre un mot different dans une div en différent sans retour a la ligne :
+
+span {  }
+
+
+réglage pour la typo:
+
+	font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+
+
+pour mettre un bort de couleur:
+
+	border-top: 2px solid black;
+
+
+pour faire de la couleur transparante:
+
+	rgba(255,255,255,0.5);
+
+
+mettre au milleux:
+
+	-webkit-transform: translateX(-50%) translateY(-50%);
+  	-ms-transform: translateX(-50%) translateY(-50%);
+  	transform: translateX(-50%) translateY(-50%);
+
+
+faire un site responsif :
+
+	@media only screen and (max-width:800px){
+
+	}
+
+
+pour enlever le scroll horizontale :
+
+	overflow-x:hidden;
+
+ou mettre du text dans une div avec un scroll :
+
+	overfflow: sroll;
+
+
+pour faire q'une vidéo soit étirable :
+
+	object-fit: fill;
+
+
+Pour faire une anim :
+
+animation-name: pour donner un nom a ton anim
+animation-duration: pour donner la durais de ton anim
+animation-iteration-count: dire ce qu'il doit faire a la fin si il doit revenir au début ou le faire q'une seul foix
+animation-timing-function: cubic-bezier pour lisser comme tu veut / linear pour faire une anim pas lissé
+animation-direction: alternate pour faire un boomrang
+animation-delay: pour faire commencer sont anim plus tard
+
+.caca {
+	animation-name: bouge;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.08, 0.39, 0,-1.87);
+	animation-direction: alternate;
+	animation-delay: 2s;
+}
+
+@keyframes bouge {
+	0% {
+		font-size: 100pt;
+		top: 0;
+	}
+
+	100% {
+		font-size: 500pt;
+		top: 100px;
+	}
+}
+
+*/
